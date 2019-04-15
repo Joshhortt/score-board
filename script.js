@@ -1,7 +1,8 @@
 
-//  You can usew both options .querySelector or .getElementById
-var p1Button = document.querySelector("#p1");
-var p2Button = document.querySelector("#p2");
+
+var p1Button = document.querySelector("#p1"); // it's also valid using .getElementById()
+var p2Button = document.getElementById("p2"); // it's also valid using .querySelector()
+var resetButton = document.getElementById("reset");
 var p1Display = document.querySelector("#p1Display");
 var p2Display = document.querySelector("#p2Display");
 var p1Score = 0;
@@ -29,4 +30,8 @@ p2Button.addEventListener("click", function(){
 		}
 		p2Display.textContent = p2Score;
 	}
+});
+
+resetButton.addEventListener("click", function(){
+	reset();
 });
