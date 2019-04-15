@@ -5,6 +5,8 @@ var p2Button = document.getElementById("p2"); // it's also valid using .querySel
 var resetButton = document.getElementById("reset");
 var p1Display = document.querySelector("#p1Display");
 var p2Display = document.querySelector("#p2Display");
+var numInput = document.querySelector("input");
+var winningScoreDisplay = document.querySelector("p span");
 var p1Score = 0;
 var p2Score = 0;
 var gameOver = false;
@@ -30,6 +32,13 @@ p2Button.addEventListener("click", function(){
 		}
 		p2Display.textContent = p2Score;
 	}
+});
+
+
+numInput.addEventListener("change", function(){
+	winningScoreDisplay.textContent = this.value;
+	winningScore = Number(this.value);
+	reset();
 });
 
 resetButton.addEventListener("click", function(){
