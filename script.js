@@ -34,13 +34,6 @@ p2Button.addEventListener("click", function(){
 	}
 });
 
-
-numInput.addEventListener("change", function(){
-	winningScoreDisplay.textContent = this.value;
-	winningScore = Number(this.value);
-	reset();
-});
-
 resetButton.addEventListener("click", function(){
 	reset();
 });
@@ -54,3 +47,9 @@ function reset(){
 	p2Display.classList.remove("winner");
 	gameOver = false;
 }
+
+numInput.addEventListener("change", function(){
+	winningScoreDisplay.textContent = this.value;
+	winningScore = Number(this.value);
+	reset();
+});
